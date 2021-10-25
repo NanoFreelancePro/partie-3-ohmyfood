@@ -1,0 +1,224 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,700;1,100&family=Shrikhand&display=swap');
+/* font-family: 'Roboto', sans-serif;
+font-family: 'Shrikhand', cursive; */
+
+/* VARIABLES */
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
+$color-bg: #eeeeee;
+
+/* MAPS */
+$insert-pic:(
+    01: url("../img/menu-palette-gout.jpg") 50% 50%,
+    02: url("../img/menu-note-enchantee.jpg") 50% 50%,
+    03: url("../img/menu-francaise.jpg") 50% 50%,
+    04: url("../img/menu-delice-sens.jpg") 50% 50%,);
+
+@mixin insert-pic ($insert-pic){
+    @each $num,$url in $insert-pic {
+        &-#{$num}{
+            background: $url;
+        }
+    }
+}
+.pic{
+    @include insert-pic($insert-pic)
+}
+
+body{
+    margin: 0;
+}
+li{
+    list-style: none;
+}
+a{
+    color: black;
+    &:link{
+        text-decoration: none;
+    }
+}
+
+/* NAVBAR */
+.nav{
+    &__logo{
+        height: auto;
+        margin: 0;
+        padding: 2rem;
+        font-family: 'Shrikhand', cursive;
+        font-size: 4em;
+        text-align: center;
+    }
+    &__localisation{
+        height: auto;
+        margin: 0;
+        padding: 2.5rem;
+        background: $color-bg;
+        box-shadow: inset 0px 3px 7px 0px #00000040;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1em;
+        font-weight: bold;
+        text-align: center;
+        & i{
+            padding-right: 50px;
+        }
+    }
+}
+
+/* HEADER */
+
+.header{
+    padding: 80px 0;
+    background: lighten($color-bg,5);
+    font-family: 'Roboto', sans-serif;
+    &__title{
+        height: auto;
+        margin: 0;
+        padding: 40px 0;
+        font-size: 3em;
+        font-weight: bold;
+        text-align: center;
+    }
+    &__txt{
+        height: auto;
+        margin: 0;
+        padding-bottom: 40px;
+        font-size: 1em;
+        text-align: center;
+    }
+    &__btn{
+        width: auto;
+        margin: 20px 20%;
+        padding: 2rem 2.5rem;
+        background: linear-gradient(to bottom,#FF79DA 0%,#9356DC 100%);
+        border: none;
+        border-radius: 50px;
+        font-size: 2.5em;
+        text-align: center;
+        color: white;
+    }
+}
+
+/* FUNCTIONALY */
+.function{
+    padding: 80px 0;
+    font-family: "Roboto", cursive;
+    &__title{
+        margin: 30px;
+        padding: 30px 0;
+        font-size: 3em;
+        font-weight: bold;
+    }
+    &__step{
+        position: relative;
+        width: auto;
+        margin: 50px;
+        padding: 2.5rem;
+        background-color: $color-bg;
+        border-radius: 50px;
+        box-shadow: 4px 4px 8px darken($color-bg,10);
+        & i{
+            padding-left: 20px;
+            padding-right: 80px;
+            color: darken($color-bg, 50);
+        }
+    }
+    &__num{
+        position: absolute;
+        top: 40px;
+        left: -25px;
+        font-size: 2em;
+        color: white;
+        background: $color-primary;
+        padding: 10px 15px;
+        border-radius: 50%;
+    }
+}
+
+/* RESTO */
+
+.resto{
+    padding: 50px 0;
+    background: $color-bg;
+    font-family: "roboto", cursive;
+    &__title{
+        margin: 30px;
+        padding-top: 70px;
+        font-size: 3em;
+    }
+    &__thumb{
+        position: relative;
+        width: auto;
+        height: auto;
+        margin: 40px;
+        background: white;
+        border-radius: 50px;
+        overflow: hidden;
+        &--pic{
+            width: 100%;
+            height: 450px;
+            background-size: cover;
+        }
+        &--name{
+            padding: 40px 0 20px 40px;
+            font-weight: bold;
+        }
+        &--localisation{
+            padding: 0 0 40px 40px;
+            font-size: 0.8em;
+        }
+        &--hearth{
+            position: absolute;
+            right: 5px;
+            bottom: 5px;
+            font-size: 50px;
+        }
+    }
+}
+.fa-heart{
+    
+    &:hover{
+        animation: color-hearth 300ms ease-in-out both;
+    }
+}
+
+@keyframes color-hearth{
+    from{
+        
+    }
+    to{
+        color: rgb(192, 23, 23);
+    }
+}
+
+/* .hearth-full{
+    display: none;
+    color: linear-gradient(to bottom,#FF79DA 0%,#9356DC 100%);
+}
+.hearth-empty{
+    color: linear-gradient(to bottom,#FF79DA 0%,#9356DC 100%);
+} */
+
+/* FOOTER */
+.footer{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-family: "roboto", cursive;
+    background: lighten(black,20);
+    color: white;
+    & a {
+        color: white;
+    }
+    &__title{
+        font-family: 'Shrikhand', cursive;
+    }
+    &__link{
+        font-size: 0.9em;
+        margin-top: 20px;
+        & i{
+            font-size: 0.8em;
+            padding-right: 50px;
+        }
+    }
+}
