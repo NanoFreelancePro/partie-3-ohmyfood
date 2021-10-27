@@ -44,7 +44,7 @@ a:link {
   background: #99E2D0;
   background-size: 100vh cover;
   opacity: 0;
-  animation: opacity 3000ms linear;
+  animation: opacity-loader 3000ms ease-in-out;
 }
 .loader__logo {
   position: fixed;
@@ -59,7 +59,7 @@ a:link {
   border-left: 20px solid #eeeeee;
   border-radius: 50%;
   opacity: 0;
-  animation: spin 1500ms linear 2 backwards;
+  animation: spin 1000ms linear 2 backwards;
 }
 .loader__txt {
   margin: 200px auto;
@@ -68,10 +68,10 @@ a:link {
   font-size: 4em;
   text-align: center;
   opacity: 0;
-  animation: bounce-top 1500ms 2 ease-in-out alternate;
+  animation: bounce-top 1000ms 2 ease-in-out alternate;
 }
 
-@keyframes opacity {
+@keyframes opacity-loader {
   0% {
     opacity: 1;
     z-index: 3;
@@ -192,9 +192,11 @@ a:link {
 }
 .header__btn:hover {
   background: #FF79DA;
+  box-shadow: 2px 2px 6px #a2a2a2;
 }
 .header__btn:active {
-  background: #ff93e1;
+  background: #ff46cc;
+  box-shadow: 2px 2px 10px #6f6f6f;
 }
 
 /* FUNCTIONALY */
@@ -202,11 +204,24 @@ a:link {
   padding: 80px 0;
   font-family: "Roboto", cursive;
 }
+@media screen and (min-width: 1025px) {
+  .function {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
 .function__title {
+  width: 90%;
   margin: 30px;
   padding: 30px 0;
   font-size: 3em;
   font-weight: bold;
+}
+@media screen and (min-width: 1025px) {
+  .function__title {
+    text-align: center;
+  }
 }
 .function__step {
   position: relative;
@@ -218,20 +233,39 @@ a:link {
   box-shadow: 4px 4px 8px #d5d5d5;
   font-size: 2em;
 }
+@media screen and (min-width: 1025px) {
+  .function__step {
+    width: 25%;
+    margin: 0;
+    padding: 1.5rem;
+    font-size: 1rem;
+  }
+}
 .function__step i {
   padding-left: 20px;
   padding-right: 80px;
   color: #6f6f6f;
 }
+@media screen and (min-width: 1025px) {
+  .function__step i {
+    padding-right: 40px;
+  }
+}
 .function__num {
   position: absolute;
   top: 33%;
   left: -25px;
-  font-size: 1em;
+  font-size: 1rem;
   color: white;
   background: #9356DC;
   padding: 7px 15px;
   border-radius: 50%;
+}
+@media screen and (min-width: 1025px) {
+  .function__num {
+    left: -10px;
+    padding: 3px 8px;
+  }
 }
 
 /* RESTO */
@@ -240,7 +274,21 @@ a:link {
   background: #eeeeee;
   font-family: "roboto", cursive;
 }
+@media screen and (min-width: 1025px) {
+  .resto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .resto a {
+    width: 40%;
+  }
+}
 .resto__title {
+  width: 90%;
   margin: 30px;
   padding-top: 70px;
   font-size: 3em;
@@ -253,6 +301,7 @@ a:link {
   background: white;
   border-radius: 50px;
   overflow: hidden;
+  font-family: "roboto", cursive;
 }
 .resto__thumb--pic {
   position: relative;
@@ -340,48 +389,248 @@ a:link {
 }
 
 /* La palette du goût */
-.food {
-  width: 80%;
-  height: 400px;
-  margin: 20px auto;
-  font-family: "roboto", sans-serif;
-  border-radius: 40px;
-  box-shadow: 2px 2px 6px 1px #eeeeee;
-  overflow: hidden;
-}
-.food__name {
-  font-size: 3em;
-  margin: 10px 0 10px 20px;
-}
-.food__localisation {
-  font-size: 2em;
-  margin: 0 0 10px 20px;
-}
-.food__pic {
+.img {
+  max-width: 100%;
+  max-height: 40rem;
   width: 100%;
-  height: 69%;
-  background-size: cover;
+  object-fit: cover;
 }
 
-.entree {
-  font-family: "roboto", sans-serif;
+.container {
+  background: #eeeeee;
+  padding-bottom: 40px;
 }
-.entree__bloc {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+@media screen and (min-width: 1025px) {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
 }
-.entree__name {
+
+.menu {
+  position: relative;
+  background: #eeeeee;
+  border-radius: 4rem 4rem 0 0;
+  margin-top: -8rem;
+  z-index: 1;
+}
+@media screen and (min-width: 1025px) {
+  .menu {
+    width: 100%;
+  }
+}
+.menu__title {
+  margin-left: 40px;
+  padding-top: 80px;
+  font-family: "Shrikhand", cursive;
+  font-size: 4em;
+}
+@media screen and (min-width: 1025px) {
+  .menu__title {
+    padding-top: 20px;
+    text-align: center;
+  }
+}
+.menu__hearth {
+  position: absolute;
+  top: 94px;
+  right: 76px;
+  font-size: 3em;
+}
+
+.menugrp {
+  font-family: "Roboto", sans-serif;
+}
+@media screen and (min-width: 1025px) {
+  .menugrp {
+    width: 33%;
+  }
+}
+.menugrp__title {
+  font-size: 2.5em;
+  text-transform: uppercase;
+  margin: 0 6%;
+}
+.menugrp__title::after {
+  content: "";
+  display: block;
+  width: 98px;
+  padding-top: 13px;
+  border-bottom: 8px solid #99E2D0;
+}
+.menugrp__btn {
+  display: block;
   width: 40%;
-  font-size: 2em;
+  margin: 80px auto;
+  padding: 2rem 2.5rem;
+  background: linear-gradient(to bottom, #FF79DA 0%, #9356DC 100%);
+  border: none;
+  border-radius: 50px;
+  font-size: 2.5em;
+  text-align: center;
+  color: white;
+  box-shadow: 2px 2px 6px #bbbbbb;
 }
-.entree__price {
-  width: 60%;
-  font-size: 2em;
+@media screen and (min-width: 1025px) {
+  .menugrp__btn {
+    width: 25%;
+    padding: 1rem;
+    font-size: 1.5em;
+  }
 }
-.entree__ingredient {
-  width: 100%;
-  font-size: 1.5em;
+.menugrp__btn:hover {
+  background: #FF79DA;
+  box-shadow: 2px 2px 6px #a2a2a2;
+}
+.menugrp__btn:active {
+  background: #ff46cc;
+  box-shadow: 2px 2px 10px #6f6f6f;
+}
+
+.plate-check {
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  height: 156px;
+  margin: 40px auto;
+}
+@media screen and (min-width: 1025px) {
+  .plate-check {
+    height: auto;
+  }
+}
+.plate-check:hover .plate {
+  animation: plate-reduc 200ms ease-in-out both;
+}
+.plate-check:hover .check {
+  animation: check-expand 300ms ease-in-out both;
+}
+
+.plate {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 90%;
+  padding: 30px;
+  background: white;
+  border-radius: 30px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+@media screen and (min-width: 1025px) {
+  .plate {
+    padding: 10px;
+  }
+}
+.plate__name {
+  width: 80%;
+  font-size: 2.5em;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media screen and (min-width: 1025px) {
+  .plate__name {
+    font-size: 1em;
+  }
+}
+.plate__desc {
+  width: 80%;
+  font-size: 2em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media screen and (min-width: 1025px) {
+  .plate__desc {
+    font-size: 1em;
+  }
+}
+.plate__price {
+  width: 10%;
+  margin-right: 23px;
+  font-size: 2.1em;
+  font-weight: bold;
+  text-align: right;
+}
+@media screen and (min-width: 1025px) {
+  .plate__price {
+    font-size: 1em;
+  }
+}
+
+.check {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 0;
+  background: #99E2D0;
+  font-size: 3em;
+  text-align: center;
+  color: white;
+  transform: translateX(-30px);
+  border-radius: 0 30px 30px 0;
+  overflow: hidden;
+}
+@media screen and (min-width: 1025px) {
+  .check {
+    font-size: 1em;
+  }
+}
+.check i {
+  margin: 54px auto;
+}
+@media screen and (min-width: 1025px) {
+  .check i {
+    margin: auto;
+  }
+}
+
+@keyframes plate-reduc {
+  0% {
+    transform-origin: right;
+    width: 90%;
+  }
+  100% {
+    transform-origin: right;
+    width: 83%;
+  }
+}
+@keyframes check-expand {
+  0% {
+    transform-origin: right;
+  }
+  100% {
+    transform-origin: right;
+    width: 10%;
+  }
+}
+@keyframes menu-appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.item {
+  opacity: 0;
+  animation: menu-appear 1500ms ease-in-out both;
+  /* animation-direction: alternate; */
+}
+.item-1 {
+  animation-delay: 750ms;
+}
+.item-2 {
+  animation-delay: 1500ms;
+}
+.item-3 {
+  animation-delay: 2250ms;
+}
+.item-4 {
+  animation-delay: 3000ms;
 }
 
 /*# sourceMappingURL=style.css.map */

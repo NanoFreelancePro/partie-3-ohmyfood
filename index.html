@@ -1,92 +1,112 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./public/css/style.css">
     <script src="https://kit.fontawesome.com/90285b2b1d.js" crossorigin="anonymous"></script>
     <title>ohmyfood</title>
 </head>
+
 <body>
     <!-- LOADER -->
     <div class="loader">
-    <div class="loader__logo"></div>
-    <div class="loader__txt">ohmyfood</div>
+        <div class="loader__logo"></div>
+        <div class="loader__txt">ohmyfood</div>
     </div>
-<!-- NAV -->
+    <!-- NAV -->
     <nav class="nav">
         <h1 class="nav__logo">ohmyfood</h1>
         <p class="nav__localisation"><i class="fas fa-map-marker-alt"></i>Paris, Belleville</p>
     </nav>
-<!-- HEADER -->
+    <!-- HEADER -->
     <header class="header">
         <h2 class="header__title">Réservez le menu qui<br>vous convient</h2>
         <p class="header__txt">Découvrez des restaurants d'exception, séléctionnés par nos soins</p>
         <button class="header__btn">Explorer nos restaurants</button>
     </header>
-<!-- FUNCTIONNALY -->
+    <!-- FUNCTIONNALY -->
     <div class="function">
         <div class="function__title">Fonctionnement</div>
-        <div class="function__step"><i class="fas fa-mobile-alt"></i>Choisissez un restaurant<div class="function__num">1</div></div>
-        <div class="function__step"><i class="fas fa-list-ul"></i>Composez votre menu<div class="function__num">2</div></div>
-        <div class="function__step"><i class="fas fa-store"></i>Dégustez au restaurant<div class="function__num">3</div></div>
-        
-        
-        
+        <div class="function__step"><i class="fas fa-mobile-alt"></i>Choisissez un restaurant<div class="function__num">
+                1</div>
+        </div>
+        <div class="function__step"><i class="fas fa-list-ul"></i>Composez votre menu<div class="function__num">2</div>
+        </div>
+        <div class="function__step"><i class="fas fa-store"></i>Dégustez au restaurant<div class="function__num">3</div>
+        </div>
     </div>
-<!-- RESTO -->
+    <!-- RESTO -->
     <div class="resto">
         <h2 class="resto__title">Restaurants</h2>
-        <a href="./menu/la-palette-du-gout.html"><div class="resto__thumb">
-            <div class="resto__thumb--pic pic-1">
-                <div class="resto__thumb--pic--new">Nouveau</div>
+        <a href="./menu/la-palette-du-gout.html">
+            <div class="resto__thumb item item-1">
+                <div class="resto__thumb--pic pic-1">
+                    <div class="resto__thumb--pic--new">Nouveau</div>
+                </div>
+                <div class="resto__thumb--name">La palette du goût</div>
+                <div class="resto__thumb--localisation">Ménilmontant</div>
+                <div class="resto__thumb--hearth">
+                    <i class="far fa-heart"></i>
+                </div>
+                <div class="resto__thumb--hearth">
+                    <i class="fas fa-heart"></i>
+                </div>
             </div>
-            <div class="resto__thumb--name">La palette du goût</div>
-            <div class="resto__thumb--localisation">Ménilmontant</div>
-            <div class="resto__thumb--hearth">
-                <i class="far fa-heart"></i></div>
-            <div class="resto__thumb--hearth">
-                <i class="fas fa-heart"></i></div>
-        </div></a>
-        <div class="resto__thumb">
-            <div class="resto__thumb--pic pic-2">
-                <div class="resto__thumb--pic--new">Nouveau</div>
+        </a>
+        <a href="./menu/la-note-enchantee.html">
+            <div class="resto__thumb item item-2">
+                <div class="resto__thumb--pic pic-2">
+                    <div class="resto__thumb--pic--new">Nouveau</div>
+                </div>
+                <div class="resto__thumb--name">La note enchantée</div>
+                <div class="resto__thumb--localisation">Charonne</div>
+                <div class="resto__thumb--hearth">
+                    <i class="far fa-heart"></i>
+                </div>
+                <div class="resto__thumb--hearth">
+                    <i class="fas fa-heart"></i>
+                </div>
             </div>
-            <div class="resto__thumb--name">La note enchantée</div>
-            <div class="resto__thumb--localisation">Charonne</div>
-            <div class="resto__thumb--hearth">
-                <i class="far fa-heart"></i></div>
-            <div class="resto__thumb--hearth">
-                <i class="fas fa-heart"></i></div>
-        </div>
-        <div class="resto__thumb">
-            <div class="resto__thumb--pic pic-3"></div>
-            <div class="resto__thumb--name">À la française</div>
-            <div class="resto__thumb--localisation">Cité Rouge</div>
-            <div class="resto__thumb--hearth">
-                <i class="far fa-heart"></i></div>
-            <div class="resto__thumb--hearth">
-                <i class="fas fa-heart"></i></div>
-        </div>
-        <div class="resto__thumb">
-            <div class="resto__thumb--pic pic-4"></div>
-            <div class="resto__thumb--name">Le délice des sens</div>
-            <div class="resto__thumb--localisation">Folie-Méricourt</div>
-            <div class="resto__thumb--hearth">
-                <i class="far fa-heart"></i></div>
-            <div class="resto__thumb--hearth">
-                <i class="fas fa-heart"></i></div>
-        </div>
+        </a>
+        <a href="./menu/a-la-francaise.html">
+            <div class="resto__thumb item item-3">
+                <div class="resto__thumb--pic pic-3"></div>
+                <div class="resto__thumb--name">À la française</div>
+                <div class="resto__thumb--localisation">Cité Rouge</div>
+                <div class="resto__thumb--hearth">
+                    <i class="far fa-heart"></i>
+                </div>
+                <div class="resto__thumb--hearth">
+                    <i class="fas fa-heart"></i>
+                </div>
+            </div>
+        </a>
+        <a href="./menu/le-delice-des-sens.html">
+            <div class="resto__thumb item item-4">
+                <div class="resto__thumb--pic pic-4"></div>
+                <div class="resto__thumb--name">Le délice des sens</div>
+                <div class="resto__thumb--localisation">Folie-Méricourt</div>
+                <div class="resto__thumb--hearth">
+                    <i class="far fa-heart"></i>
+                </div>
+                <div class="resto__thumb--hearth">
+                    <i class="fas fa-heart"></i>
+                </div>
+            </div>
+        </a>
     </div>
-<!-- FOOTER -->
+    <!-- FOOTER -->
     <footer class="footer">
         <div class="footer__title">ohmyfood</div>
         <ul>
-            <a href="#"><li class="footer__link"><i class="fas fa-utensils"></i>Proposer un restaurant</li></a>
-            <a href="#"><li class="footer__link"><i class="fas fa-hands-helping"></i>Devenir partenaire</li></a>
-            <a href="#"><li class="footer__link">Mentions légales</li></a>
-            <a href="#"><li class="footer__link">Contact</li></a>
+            <li class="footer__link"><a href="#"><i class="fas fa-utensils"></i>Proposer un restaurant</a></li>
+            <li class="footer__link"><a href="#"><i class="fas fa-hands-helping"></i>Devenir partenaire</a></li>
+            <li class="footer__link"> <a href="#">Mentions légales </a></li>
+            <li class="footer__link"><a href="mailto:support@ohmyfood.fr">Contact </a></li>
         </ul>
     </footer>
-    
+
 </body>
+
 </html>
